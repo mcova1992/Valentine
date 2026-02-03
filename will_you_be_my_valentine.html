@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Will You Be My Valentine?</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #ff758c, #ff7eb3);
+      color: #fff;
+      text-align: center;
+    }
+    .card {
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(8px);
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+      max-width: 400px;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 30px;
+    }
+    button {
+      border: none;
+      padding: 12px 24px;
+      margin: 10px;
+      font-size: 1rem;
+      border-radius: 999px;
+      cursor: pointer;
+      transition: transform 0.2s ease, background 0.2s ease;
+    }
+    .yes {
+      background: #ff4d6d;
+      color: white;
+    }
+    .no {
+      background: white;
+      color: #ff4d6d;
+    }
+    button:hover {
+      transform: scale(1.1);
+    }
+    #response {
+      margin-top: 25px;
+      font-size: 1.4rem;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>💖 Will You Be My Valentine? 💖</h1>
+    <p>I was going to ask in person… but this felt cuter.</p>
+    <button class="yes" onclick="sayYes()">Yes 💕</button>
+    <button class="no" onclick="sayNo()">No 😅</button>
+    <div id="response"></div>
+  </div>
+
+  <script>
+    function sayYes() {
+      document.getElementById('response').innerHTML = "Yay!!! 💘 Best decision ever 😍";
+    }
+    function sayNo() {
+      document.getElementById('response').innerHTML = "That's okay… but are you *sure*? 🥺💔";
+    }
+  </script>
+</body>
+</html>
