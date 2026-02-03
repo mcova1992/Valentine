@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Will You Be My Valentine?</title>
+
   <style>
     body {
       margin: 0;
@@ -12,12 +13,14 @@
       align-items: center;
       justify-content: center;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+      /* Pink/Red Valentine Cheetah Background */
       background:
         linear-gradient(
           rgba(255, 77, 109, 0.55),
           rgba(255, 126, 179, 0.55)
         ),
-        url('cheetah.png');
+        url('Cheetahprint.png');
 
       background-size: cover;
       background-position: center;
@@ -26,42 +29,53 @@
       color: #fff;
       text-align: center;
     }
+
     .card {
-      background: rgba(255, 255, 255, 0.15);
-      backdrop-filter: blur(8px);
+      background: rgba(255, 255, 255, 0.18);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
       padding: 40px;
       border-radius: 20px;
-      box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.25);
       max-width: 400px;
+      border: 2px solid rgba(255, 182, 193, 0.6);
     }
+
     h1 {
       font-size: 2.5rem;
       margin-bottom: 20px;
     }
+
     p {
       font-size: 1.1rem;
       margin-bottom: 30px;
     }
+
     button {
       border: none;
-      padding: 12px 24px;
+      padding: 12px 26px;
       margin: 10px;
       font-size: 1rem;
       border-radius: 999px;
       cursor: pointer;
-      transition: transform 0.2s ease, background 0.2s ease;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
+
     .yes {
-      background: white;
+      background: #ff4d6d;
       color: white;
+      box-shadow: 0 10px 20px rgba(255, 77, 109, 0.4);
     }
+
     .no {
       background: white;
       color: #ff4d6d;
     }
+
     button:hover {
       transform: scale(1.1);
     }
+
     #response {
       margin-top: 25px;
       font-size: 1.4rem;
@@ -69,22 +83,29 @@
     }
   </style>
 </head>
+
 <body>
   <div class="card">
     <h1>💖 Will You Be My Valentine? 💖</h1>
-    <p>Remember that I know where you sleep boo!</p>
+    <p>I Know where you Sleep Boo!</p>
+
     <button class="yes" onclick="sayYes()">Yes 💕</button>
     <button class="no" onclick="sayNo()">No 😅</button>
+
     <div id="response"></div>
   </div>
 
   <script>
     function sayYes() {
-      document.getElementById('response').innerHTML = "Better Say Yes!! 😍";
+      document.getElementById('response').innerHTML =
+        "Better say Yes 😍";
     }
+
     function sayNo() {
-      document.getElementById('response').innerHTML = "Oh Hell Naw Better say yes💔";
+      document.getElementById('response').innerHTML =
+        "Oh Hell Naw better change your answer Pagina 💔";
     }
   </script>
 </body>
 </html>
+
